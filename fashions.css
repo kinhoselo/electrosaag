@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "ChineseRocks";
+  src: url("rocka.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: black;
+  color: #f2f2f2;
+  font-family: "ChineseRocks", monospace;
+  overflow-x: hidden;
+}
+
+/* FUNDO DO CAOS */
+.fundao-loko {
+  position: fixed;
+  inset: 0;
+  background: url("bg2.gif") center/cover no-repeat;
+  filter: contrast(140%) brightness(40%);
+  z-index: -3;
+}
+
+/* ESCURECE PQ SIM */
+.sombra-pq-sim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -2;
+}
+
+/* TV SEM SINAL */
+.chuvisco-do-mal {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  z-index: 999;
+}
+
+header {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.grito-em-vermelho {
+  color: red;
+  letter-spacing: 2px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.texto-estranho {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.galera-ai {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+  padding: 50px;
+}
+
+.pessoa-da-ficha {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 15px;
+}
+
+.pessoa-da-ficha img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(130%);
+}
+
+.numerinho-irritante {
+  color: #ff003c;
+  font-size: 12px;
+}
+
+.pessoa-da-ficha h2 {
+  margin: 10px 0 5px;
+  letter-spacing: 2px;
+}
+
+.pessoa-da-ficha p {
+  font-size: 14px;
+  opacity: 0.85;
+  min-height: 60px;
+}
+
+/* GLITCH — NÃO MEXE PQ QUEBRA */
+.glitch {
+  position: relative;
+  font-size: 48px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.glitch::before {
+  top: -2px;
+  color: #00ffcc;
+  animation: glitch 2s infinite;
+}
+
+.glitch::after {
+  top: 2px;
+  color: #ff003c;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 80% 0); }
+  25% { clip-path: inset(20% 0 60% 0); }
+  50% { clip-path: inset(40% 0 40% 0); }
+  75% { clip-path: inset(60% 0 20% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.4;
+}
+
+/* CAVEIRA FANTASMA (JS MANDA AQUI) */
+#random-glitch {
+  position: fixed;
+  width: 160px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 9999;
+  filter: grayscale(100%) contrast(160%);
+  mix-blend-mode: screen;
+}
