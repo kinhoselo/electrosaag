@@ -212,3 +212,12 @@ footer {
     opacity: 1;
   }
 }
+
+#random-skull {
+  position: fixed;
+  width: 180px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  filter: grayscale(100%) contrast(120%);
+}
