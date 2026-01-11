@@ -150,3 +150,65 @@ footer {
   filter: grayscale(100%) contrast(160%);
   mix-blend-mode: screen;
 }
+
+.final-error {
+  margin: 120px auto;
+  padding: 30px;
+  width: fit-content;
+  max-width: 90%;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #fff;
+  font-family: 'Chinese Rocks RG', sans-serif;
+  text-align: center;
+  animation: glitchFlicker 3s infinite;
+}
+
+.error-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 0 red, -2px 0 cyan;
+}
+
+.error-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.error-link {
+  font-family: 'Frost Scream', sans-serif;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid white;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.error-link:hover {
+  background: white;
+  color: black;
+}
+
+@keyframes glitchFlicker {
+  0%, 100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  10% {
+    opacity: 0.6;
+    transform: translate(-2px, 1px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(2px, -1px);
+  }
+  30% {
+    opacity: 0.4;
+  }
+  31% {
+    opacity: 1;
+  }
+}
