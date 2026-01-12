@@ -14,35 +14,9 @@ function randomGlitch() {
 
   setTimeout(() => {
     glitch.style.opacity = 0;
-  }, 500);
+  }, 300);
 
   setTimeout(randomGlitch, Math.random() * 5000 + 900);
 }
 
 randomGlitch();
-
-const skull = document.getElementById("random-skull");
-
-function flashSkull() {
-  if (!skull) return;
-
-  const size = 180;
-  const maxX = window.innerWidth - size;
-  const maxY = window.innerHeight - size;
-
-  const x = Math.random() * maxX;
-  const y = Math.random() * maxY;
-
-  skull.style.left = `${x}px`;
-  skull.style.top = `${y}px`;
-  skull.style.opacity = 1;
-
-  setTimeout(() => {
-    skull.style.opacity = 0;
-  }, 500);
-
-  const nextFlash = Math.random() * 5000 + 1500;
-  setTimeout(flashSkull, nextFlash);
-}
-
-flashSkull();
