@@ -14,7 +14,7 @@ function randomGlitch() {
 
   setTimeout(() => {
     glitch.style.opacity = 0;
-  }, Math.random() * 250 + 120);
+  }, 500);
 
   setTimeout(randomGlitch, Math.random() * 5000 + 900);
 }
@@ -39,7 +39,7 @@ function flashSkull() {
 
   setTimeout(() => {
     skull.style.opacity = 0;
-  }, 120);
+  }, 500);
 
   const nextFlash = Math.random() * 5000 + 1500;
   setTimeout(flashSkull, nextFlash);
