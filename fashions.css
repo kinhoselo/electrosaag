@@ -15,8 +15,7 @@ body {
   overflow-x: hidden;
 }
 
-/* FUNDO DO CAOS */
-.fundao-loko {
+.fundo {
   position: fixed;
   inset: 0;
   background: url("bg2.gif") center/cover no-repeat;
@@ -24,16 +23,14 @@ body {
   z-index: -3;
 }
 
-/* ESCURECE PQ SIM */
-.sombra-pq-sim {
+.sombra {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: -2;
 }
 
-/* TV SEM SINAL */
-.chuvisco-do-mal {
+.chuvisco {
   pointer-events: none;
   position: fixed;
   inset: 0;
@@ -47,7 +44,7 @@ header {
   padding: 70px 20px;
 }
 
-.grito-em-vermelho {
+.vermelho {
   color: red;
   letter-spacing: 2px;
   animation: blink 1.2s infinite;
@@ -84,7 +81,7 @@ header {
   filter: grayscale(100%) contrast(130%);
 }
 
-.numerinho-irritante {
+.num {
   color: #ff003c;
   font-size: 12px;
 }
@@ -100,7 +97,6 @@ header {
   min-height: 60px;
 }
 
-/* GLITCH — NÃO MEXE PQ QUEBRA */
 .glitch {
   position: relative;
   font-size: 48px;
@@ -116,13 +112,13 @@ header {
 
 .glitch::before {
   top: -2px;
-  color: #00ffcc;
+  color: #174905;
   animation: glitch 2s infinite;
 }
 
 .glitch::after {
   top: 2px;
-  color: #ff003c;
+  color: #0f7129;
   animation: glitch 1.5s infinite;
 }
 
@@ -140,7 +136,6 @@ footer {
   opacity: 0.4;
 }
 
-/* CAVEIRA FANTASMA (JS MANDA AQUI) */
 #random-glitch {
   position: fixed;
   width: 160px;
@@ -220,4 +215,130 @@ footer {
   pointer-events: none;
   opacity: 0;
   filter: grayscale(100%) contrast(120%);
+}
+
+.lanca-card {
+  margin: 120px auto 80px;
+  max-width: 900px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.85);
+  position: relative;
+}
+
+.lanca-tag {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: black;
+  padding: 4px 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border: 1px solid white;
+}
+
+.lanca-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.lanca-content img {
+  width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(120%);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.lanca-info h2 {
+  font-family: "Frost Scream", sans-serif;
+  font-size: 42px;
+  margin: 0;
+}
+
+.lanca-type {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.7;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.lanca-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.lanca-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.lanca-link:hover {
+  background: white;
+  color: black;
+}
+
+.naolancado {
+  opacity: 0.8;
+  filter: contrast(120%);
+}
+
+.dataph {
+  width: 260px;
+  aspect-ratio: 1 / 1;
+  border: 1px dashed rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+data {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.data span {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border: 1px solid rgba(255,255,255,0.4);
+  font-family: monospace;
+}
+
+.corrompe {
+  animation: corruptText 3s infinite;
+}
+
+@keyframes corruptText {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.4; letter-spacing: 4px; }
+  100% { opacity: 0.8; }
+}
+
+.bugtg {
+  animation: glitchTag 2.5s infinite;
+}
+
+@keyframes glitchTag {
+  0% { opacity: 1; }
+  45% { opacity: 0.2; }
+  50% { opacity: 1; }
+  55% { opacity: 0.4; }
+  100% { opacity: 1; }
 }
