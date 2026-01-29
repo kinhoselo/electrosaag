@@ -217,15 +217,6 @@ footer {
   filter: grayscale(100%) contrast(120%);
 }
 
-#random-raio {
-  position: fixed;
-  width: 180px;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0;
-  filter: grayscale(100%) contrast(120%);
-}
-
 .lanca-card {
   margin: 120px auto 80px;
   max-width: 900px;
