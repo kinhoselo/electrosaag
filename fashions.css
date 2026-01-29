@@ -342,3 +342,13 @@ data {
   55% { opacity: 0.4; }
   100% { opacity: 1; }
 }
+
+#raio-glitch {
+  position: fixed;
+  width: 140px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+  filter: brightness(200%) contrast(200%);
+  mix-blend-mode: screen;
+}
